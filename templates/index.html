@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Voluntários e Doações</title>
+</head>
+<body>
+    <h1>Cadastro de Voluntários e Doações</h1>
+    <a href="{{ url_for('index') }}">Home</a>
+    <h2>Cadastrar Voluntário</h2>
+    <form action="{{ url_for('cadastrar_voluntario') }}" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br>
+        <button type="submit">Cadastrar Voluntário</button>
+    </form>
+    <h2>Cadastrar Doação</h2>
+    <form action="{{ url_for('cadastrar_doacao') }}" method="POST">
+        <label for="doador">Doador:</label>
+        <input type="text" id="doador" name="doador" required><br>
+        <label for="valor">Valor:</label>
+        <input type="number" step="0.01" id="valor" name="valor" required><br>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required><br>
+        <button type="submit">Cadastrar Doação</button>
+    </form>
+</body>
+</html>
